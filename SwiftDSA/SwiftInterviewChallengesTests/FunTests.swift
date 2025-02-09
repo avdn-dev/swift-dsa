@@ -57,4 +57,12 @@ struct FunTests {
         #expect(removeDuplicateCharacters(in: "hello") == "helo")
         #expect(removeDuplicateCharacters(in: "Mississippi") == "Misp")
     }
+    
+    @Test("Fun challenge 7: Matching anagrams")
+    func anagrams() {
+        #expect(isAnagram("stone", for: "tones"))
+        #expect(isAnagram("madam", for: "madam"))
+        #expect(isAnagram("Madam", for: "madam") == false)
+        #expect(isAnagram("hello", for: "world") == false)
+    }
 }

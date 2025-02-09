@@ -47,3 +47,7 @@ func removeDuplicateCharacters(in string: String) -> String {
     let orderedUniqueLetters = NSOrderedSet(array: Array(string))
     return String(orderedUniqueLetters.array as! [Character])
 }
+
+func isAnagram(_ string1: String, for string2: String) -> Bool {
+    string1.sorted() == string2.sorted()
+}
