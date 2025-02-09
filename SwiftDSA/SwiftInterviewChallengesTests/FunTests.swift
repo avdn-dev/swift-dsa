@@ -94,4 +94,12 @@ struct FunTests {
         #expect(sortByFrequency([1, 1, 1, 1, 1, 1]) == [1, 1, 1, 1, 1, 1])
         #expect(sortByFrequency([3, 2, 1]) == [1, 2, 3])
     }
+    
+    @Test("Fun challenge 13: Square roots")
+    func squareRoots() {
+        #expect(sqrt(9) == 3)
+        #expect(sqrt(16777216) == 4096)
+        #expect(sqrt(16) == 4)
+        #expect(sqrt(15) == 3)
+    }
 }

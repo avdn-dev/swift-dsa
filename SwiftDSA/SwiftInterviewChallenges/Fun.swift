@@ -91,3 +91,22 @@ func sortByFrequency<T: Comparable & Hashable>(_ array: [T]) -> [T] {
         }
     }
 }
+
+func sqrt(_ num: Int) -> Int {
+    var left = 0
+    var right = num / 2
+    var root: Int?
+    while left < right {
+        let middle = right - ((right - left) / 2)
+        let square = middle * middle
+        if square == num {
+            root = middle
+            break
+        } else if square < num {
+            left = middle + 1
+        } else {
+            right = middle - 1
+        }
+    }
+    return root ?? left
+}
