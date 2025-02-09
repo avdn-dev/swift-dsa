@@ -80,4 +80,10 @@ struct FunTests {
         #expect(condenseWhitespace(in: " a") == " a")
         #expect(condenseWhitespace(in: "abc") == "abc")
     }
+    
+    @Test("Fun challenge 10: Finding pangrams")
+    func pangrams() {
+        #expect(isPangram("The quick brown fox jumps over the lazy dog"))
+        #expect(isPangram("The quick brown fox jumped over the lazy dog") == false)
+    }
 }

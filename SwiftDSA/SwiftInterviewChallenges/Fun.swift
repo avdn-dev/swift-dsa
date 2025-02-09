@@ -72,3 +72,7 @@ func condenseWhitespace(in string: String) -> String {
     }
     return String(condensedString)
 }
+
+func isPangram(_ string: String) -> Bool {
+    Array("abcdefghijklmnopqrstuvwxyz").allSatisfy { Set(string.lowercased()).contains($0) }
+}
