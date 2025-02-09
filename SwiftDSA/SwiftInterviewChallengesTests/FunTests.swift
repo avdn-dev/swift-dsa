@@ -157,4 +157,9 @@ struct FunTests {
         #expect(majorityValue(in: [1, 2, 1, 2, 1]) == 1)
         #expect(majorityValue(in: [1, 2, 2, 2, 1]) == 2)
     }
+    
+    @Test("Fun challenge 19: Goldilocks searching")
+    func binarySearch() {
+        #expect(guessNumber() == 320)
+    }
 }

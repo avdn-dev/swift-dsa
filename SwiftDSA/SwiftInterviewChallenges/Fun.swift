@@ -193,3 +193,34 @@ func majorityValue(in nums: [Int]) -> Int {
     }
     return majority
 }
+
+func numberIsCorrect(_ number: Int) -> Int {
+    // The actual number you're trying
+    // to guess could be anything; the
+    // below is just an example.
+    let actual = 320
+    if number < actual {
+        return -1
+    } else if number > actual {
+        return 1
+    } else {
+        return 0
+    }
+}
+
+func guessNumber() -> Int {
+    var low = 1
+    var high = 1000
+    while low <= high {
+        let middle = low + ((high - low) / 2)
+        switch numberIsCorrect(middle) {
+        case 0:
+            return middle
+        case 1:
+            high = middle - 1
+        default:
+            low = middle + 1
+        }
+    }
+    return low
+}
