@@ -102,4 +102,18 @@ struct FunTests {
         #expect(sqrt(16) == 4)
         #expect(sqrt(15) == 3)
     }
+    
+    @Test("Fun challenge 14: Matching socks")
+    func matchingSocks() {
+        let socks = [
+            Sock(size: .large, color: .black, material: .wool),
+            Sock(size: .large, color: .red, material: .wool),
+            Sock(size: .medium, color: .black, material: .cotton),
+            Sock(size: .small, color: .black, material: .cotton),
+        ]
+        
+        #expect(count(socks, matching: \.color, value: .black) == 3)
+        #expect(count(socks, matching: \.color, value: .red) == 1)
+        #expect(count(socks, matching: \.size, value: .large) == 2)
+    }
 }

@@ -110,3 +110,24 @@ func sqrt(_ num: Int) -> Int {
     }
     return root ?? left
 }
+
+struct Sock {
+    enum Size: String {
+        case small, medium, large
+    }
+    enum Color: String {
+        case white, black, red, blue
+    }
+    enum Material: String {
+        case wool, cotton, silk
+    }
+    var size: Size
+    var color: Color
+    var material: Material
+}
+
+func count<V: Equatable>(_ socks: [Sock], matching keypath: KeyPath<Sock, V>, value: V) -> Int {
+    socks.count {
+        $0[keyPath: keypath] == value
+    }
+}
