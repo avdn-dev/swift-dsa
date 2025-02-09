@@ -1,5 +1,5 @@
 //
-//  Fun.swift
+//  Practice.swift
 //  SwiftInterviewChallenges
 //
 //  Created by Anh Nguyen on 9/2/2025.

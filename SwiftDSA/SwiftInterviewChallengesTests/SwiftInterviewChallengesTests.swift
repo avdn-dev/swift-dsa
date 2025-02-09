@@ -8,8 +8,8 @@
 import Testing
 @testable import SwiftInterviewChallenges
 
-@Suite("Fun Tests")
-struct FunTests {
+@Suite("Practice Tests")
+struct PracticeTests {
     @Test("Practice challenge 1: Sum an array of numbers")
     func sumNumbers() {
         let positiveInts = [1, 2, 3]
