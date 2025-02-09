@@ -172,3 +172,24 @@ func longestPrefix(in string: String) -> String {
     }
     return prefix
 }
+
+func majorityValue(in nums: [Int]) -> Int {
+    let majorityCount = (nums.count / 2) + (nums.count.isMultiple(of: 2) ? 0 : 1)
+    var majority = nums[0]
+    var count = 0
+    for num in nums {
+        if num == majority {
+            count += 1
+            if count == majorityCount {
+                return majority
+            }
+        } else {
+            count -= 1
+            if count == 0 {
+                majority = num
+                count = 1
+            }
+        }
+    }
+    return majority
+}

@@ -148,4 +148,13 @@ struct FunTests {
         #expect(longestPrefix(in: "flip flap flop") == "fl")
         #expect(longestPrefix(in: "hello world") == "")
     }
+    
+    @Test("Fun challenge 18: Find the majority value")
+    func findMajority() {
+        #expect(majorityValue(in: [1, 2, 2, 3]) == 2)
+        #expect(majorityValue(in: [1, 2, 2, 2, 3]) == 2)
+        #expect(majorityValue(in: [1, 2, 2, 3, 3, 3]) == 3)
+        #expect(majorityValue(in: [1, 2, 1, 2, 1]) == 1)
+        #expect(majorityValue(in: [1, 2, 2, 2, 1]) == 2)
+    }
 }
