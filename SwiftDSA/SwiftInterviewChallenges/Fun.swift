@@ -42,3 +42,8 @@ func count(needles: String, in haystack: String) -> Int {
 func isPalindrome(string: String) -> Bool {
     String(string.lowercased().reversed()) == string.lowercased()
 }
+
+func removeDuplicateCharacters(in string: String) -> String {
+    let orderedUniqueLetters = NSOrderedSet(array: Array(string))
+    return String(orderedUniqueLetters.array as! [Character])
+}

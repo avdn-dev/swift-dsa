@@ -50,5 +50,11 @@ struct FunTests {
         #expect(isPalindrome(string: "Never odd or even") == false)
         #expect(isPalindrome(string: "Hello, world") == false)
     }
+    
+    @Test("Fun challenge 6: Removing duplicate letters")
+    func removingDuplicateLetters() {
+        #expect(removeDuplicateCharacters(in: "wombat") == "wombat")
+        #expect(removeDuplicateCharacters(in: "hello") == "helo")
+        #expect(removeDuplicateCharacters(in: "Mississippi") == "Misp")
+    }
 }
-
