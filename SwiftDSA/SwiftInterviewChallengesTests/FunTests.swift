@@ -65,4 +65,12 @@ struct FunTests {
         #expect(isAnagram("Madam", for: "madam") == false)
         #expect(isAnagram("hello", for: "world") == false)
     }
+    
+    @Test("Fun challenge 8: Count the numbers")
+    func countNumbers() {
+        #expect(count("5", in: [5, 15, 55, 515]) == 6)
+        #expect(count("1", in: [5, 15, 55, 515]) == 2)
+        #expect(count("5", in: [55555]) == 5)
+        #expect(count("1", in: [55555]) == 0)
+    }
 }

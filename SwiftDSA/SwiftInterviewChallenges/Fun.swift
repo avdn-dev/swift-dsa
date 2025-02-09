@@ -51,3 +51,9 @@ func removeDuplicateCharacters(in string: String) -> String {
 func isAnagram(_ string1: String, for string2: String) -> Bool {
     string1.sorted() == string2.sorted()
 }
+
+func count(_ digit: Character, in numbers: [Int]) -> Int {
+    numbers.map(String.init).reduce(0) { currentCount, numberString in
+        currentCount + numberString.count { $0 == digit }
+    }
+}
