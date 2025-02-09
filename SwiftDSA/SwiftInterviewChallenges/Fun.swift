@@ -148,3 +148,27 @@ func sort(sentence: String) -> String {
         .map { $0.dropLast() }
         .joined(separator: " ")
 }
+
+func longestPrefix(in string: String) -> String {
+    let words = string.split(separator: " ")
+    if words.isEmpty { return "" }
+    var prefix = String(words.last!)
+    
+    for word in words.dropLast() {
+        var currentPrefix = ""
+        for (i, (character1, character2)) in zip(prefix, word).enumerated() {
+            if i == prefix.count {
+                break
+            }
+            if character1 == character2 {
+                currentPrefix.append(character1)
+            } else {
+                break
+            }
+        }
+        if currentPrefix.count < prefix.count {
+            prefix = currentPrefix
+        }
+    }
+    return prefix
+}

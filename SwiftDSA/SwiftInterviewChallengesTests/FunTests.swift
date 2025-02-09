@@ -141,4 +141,11 @@ struct FunTests {
         #expect(sort(sentence: "world2 hello1") == "hello world")
         #expect(sort(sentence: "the1 rain2 in3 spain4") == "the rain in spain")
     }
+    
+    @Test("Fun challenge 17: Find longest prefix")
+    func findLongestPrefix() {
+        #expect(longestPrefix(in: "swift switch swill swim") == "swi")
+        #expect(longestPrefix(in: "flip flap flop") == "fl")
+        #expect(longestPrefix(in: "hello world") == "")
+    }
 }
