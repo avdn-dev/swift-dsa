@@ -42,5 +42,13 @@ struct FunTests {
         #expect(count(needles: "abc", in: "abcabc") == 6)
         #expect(count(needles: "a", in: "AAA") == 0)
     }
+    
+    @Test("Fun challenge 5: Is a string a palindrome?")
+    func palindrome() {
+        #expect(isPalindrome(string: "rotator"))
+        #expect(isPalindrome(string: "Rats live on no evil star"))
+        #expect(isPalindrome(string: "Never odd or even") == false)
+        #expect(isPalindrome(string: "Hello, world") == false)
+    }
 }
 

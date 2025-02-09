@@ -38,3 +38,7 @@ func count(needles: String, in haystack: String) -> Int {
     }
     return occurences
 }
+
+func isPalindrome(string: String) -> Bool {
+    String(string.lowercased().reversed()) == string.lowercased()
+}
