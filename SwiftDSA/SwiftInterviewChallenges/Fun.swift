@@ -18,3 +18,7 @@ func fizzBuzz(_ n: Int) -> String {
         String(n)
     }
 }
+
+func lettersAreUnique(in string: String) -> Bool {
+    Set(string).count == string.count
+}
