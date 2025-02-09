@@ -116,4 +116,22 @@ struct FunTests {
         #expect(count(socks, matching: \.color, value: .red) == 1)
         #expect(count(socks, matching: \.size, value: .large) == 2)
     }
+    
+    @Test("Fun challenge 15: In-place reversal")
+    func inPlaceReversal() {
+        var input1 = [1, 3, 5, 7]
+        var input2 = [2, 4, 6, 8]
+        var input3 = [10, 20, 30, 40, 50]
+        var input4 = [1, 1, 2, 2, 1, 1]
+        
+        reverse(&input1)
+        reverse(&input2)
+        reverse(&input3)
+        reverse(&input4)
+        
+        #expect(input1 == [7, 5, 3, 1])
+        #expect(input2 == [8, 6, 4, 2])
+        #expect(input3 == [50, 40, 30, 20, 10])
+        #expect(input4 == [1, 1, 2, 2, 1, 1])
+    }
 }

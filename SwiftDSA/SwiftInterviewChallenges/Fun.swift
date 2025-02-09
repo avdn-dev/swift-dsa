@@ -131,3 +131,13 @@ func count<V: Equatable>(_ socks: [Sock], matching keypath: KeyPath<Sock, V>, va
         $0[keyPath: keypath] == value
     }
 }
+
+func reverse(_ input: inout [Int]) {
+    var left = 0
+    var right = input.count - 1
+    while left < right {
+        input.swapAt(left, right)
+        left += 1
+        right -= 1
+    }
+}
