@@ -73,4 +73,11 @@ struct FunTests {
         #expect(count("5", in: [55555]) == 5)
         #expect(count("1", in: [55555]) == 0)
     }
+    
+    @Test("Fun challenge 9: Condense whitespace")
+    func condenseSpaces() {
+        #expect(condenseWhitespace(in: "a b c") == "a b c")
+        #expect(condenseWhitespace(in: " a") == " a")
+        #expect(condenseWhitespace(in: "abc") == "abc")
+    }
 }

@@ -57,3 +57,18 @@ func count(_ digit: Character, in numbers: [Int]) -> Int {
         currentCount + numberString.count { $0 == digit }
     }
 }
+
+func condenseWhitespace(in string: String) -> String {
+    var condensedString = [Character]()
+    var seenSpace = false
+    for character in string {
+        if character == " " && !seenSpace {
+            seenSpace = true
+            condensedString.append(character)
+        } else if character != " " {
+            seenSpace = false
+            condensedString.append(character)
+        }
+    }
+    return String(condensedString)
+}
