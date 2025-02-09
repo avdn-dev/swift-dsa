@@ -56,4 +56,19 @@ struct PracticeTests {
         #expect([256, 16].smallest(3) == [16, 256])
         #expect([String]().smallest(3) == [])
     }
+    
+    @Test("Practice challenge 6: Traversing the tree")
+    func treeTraversal() {
+        let two = Node(2)
+        two.left = Node(1)
+        two.right = Node(3)
+        
+        var values = [Int]()
+        two.traverse { values.append($0.value) }
+        #expect(values == [1, 2, 3])
+        
+        var sum = 0
+        two.traverse { sum += $0.value }
+        #expect(sum == 6)
+    }
 }

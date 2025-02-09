@@ -28,3 +28,19 @@ extension Collection where Element: Comparable {
         Array(self.sorted().prefix(n))
     }
 }
+
+class Node<Value> {
+    var value: Value
+    var left: Node?
+    var right: Node?
+    
+    init(_ value: Value) {
+        self.value = value
+    }
+    
+    func traverse(_ closure: (Node<Value>) -> Void) {
+        left?.traverse(closure)
+        closure(self)
+        right?.traverse(closure)
+    }
+}
