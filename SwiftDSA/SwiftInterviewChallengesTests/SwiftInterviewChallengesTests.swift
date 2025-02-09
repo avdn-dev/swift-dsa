@@ -39,3 +39,12 @@ struct CountCharactersTests {
         #expect(count(letter: "i", in: "Hacking with Swift") == 3)
     }
 }
+
+@Suite("Practice challenge 3: Sort a string array by length")
+struct SortByLengthTests {
+    @Test func sortStrngs() {
+        #expect(sortByLength(["a", "abc", "ab"]) == ["abc", "ab", "a"])
+        #expect(sortByLength(["paul", "taylor", "adele"]) == ["taylor", "adele", "paul"])
+        #expect(sortByLength([]) == [])
+    }
+}

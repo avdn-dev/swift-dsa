@@ -14,3 +14,7 @@ func sum<Number: Numeric>(_ nums: [Number]) -> Number {
 func count(letter: Character, in word: String) -> Int {
     return word.filter { $0 == letter }.count
 }
+
+func sortByLength(_ array: [String]) -> [String] {
+    return array.sorted { $0.count > $1.count }
+}
