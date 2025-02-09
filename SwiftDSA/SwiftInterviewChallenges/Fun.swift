@@ -141,3 +141,10 @@ func reverse(_ input: inout [Int]) {
         right -= 1
     }
 }
+
+func sort(sentence: String) -> String {
+    sentence.split(separator: " ")
+        .sorted { $0.last! < $1.last! }
+        .map { $0.dropLast() }
+        .joined(separator: " ")
+}

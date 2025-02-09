@@ -134,4 +134,11 @@ struct FunTests {
         #expect(input3 == [50, 40, 30, 20, 10])
         #expect(input4 == [1, 1, 2, 2, 1, 1])
     }
+    
+    @Test("Fun challenge 16: Sentences by numbers")
+    func sortSentenceByNumbers() {
+        #expect(sort(sentence: "morning2 good1 all4 to3") == "good morning to all")
+        #expect(sort(sentence: "world2 hello1") == "hello world")
+        #expect(sort(sentence: "the1 rain2 in3 spain4") == "the rain in spain")
+    }
 }
