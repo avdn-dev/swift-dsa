@@ -27,3 +27,14 @@ func uniqueOccurrences(in string: String) -> Bool {
     let counts = Dictionary(grouping: string) { $0 }.values.map { $0.count }
     return Set(counts).count == counts.count
 }
+
+func count(needles: String, in haystack: String) -> Int {
+    var occurences = 0
+    let needlesSet = Set(needles)
+    for character in haystack {
+        if needlesSet.contains(character) {
+            occurences += 1
+        }
+    }
+    return occurences
+}

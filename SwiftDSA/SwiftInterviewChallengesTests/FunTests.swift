@@ -35,5 +35,12 @@ struct FunTests {
         #expect(uniqueOccurrences(in: "HELLO") == false)
         #expect(uniqueOccurrences(in: "HeLlO") == false)
     }
+    
+    @Test("Fun challenge 4: Needles in a haystack")
+    func coundNeedles() {
+        #expect(count(needles: "Aa", in: "ABACA") == 3)
+        #expect(count(needles: "abc", in: "abcabc") == 6)
+        #expect(count(needles: "a", in: "AAA") == 0)
+    }
 }
 
