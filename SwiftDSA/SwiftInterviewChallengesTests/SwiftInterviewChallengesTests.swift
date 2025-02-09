@@ -48,4 +48,12 @@ struct FunTests {
         #expect(areCharactersIdentical(in: "abcc", and: "abca") == false)
         #expect(areCharactersIdentical(in: "abc", and: "Abc") == false)
     }
+    
+    @Test("Practice challenge 5: Find n smallest")
+    func nSmallest() {
+        #expect([1, 2, 3, 4].smallest(3) == [1, 2, 3])
+        #expect(["q", "f", "k"].smallest(3) == ["f", "k", "q"])
+        #expect([256, 16].smallest(3) == [16, 256])
+        #expect([String]().smallest(3) == [])
+    }
 }
