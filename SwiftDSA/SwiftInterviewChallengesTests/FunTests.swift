@@ -27,5 +27,13 @@ struct FunTests {
         #expect(lettersAreUnique(in: "AaBbCc"))
         #expect(lettersAreUnique(in: "Hello, world") == false)
     }
+    
+    @Test("Fun challenge 3: Are the letter occurrences unique?")
+    func uniqueLetterOccurences() {
+        #expect(uniqueOccurrences(in: "ABBCCCDDDD"))
+        #expect(uniqueOccurrences(in: "AABACCCABD"))
+        #expect(uniqueOccurrences(in: "HELLO") == false)
+        #expect(uniqueOccurrences(in: "HeLlO") == false)
+    }
 }
 

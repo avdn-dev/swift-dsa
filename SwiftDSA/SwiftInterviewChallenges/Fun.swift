@@ -22,3 +22,8 @@ func fizzBuzz(_ n: Int) -> String {
 func lettersAreUnique(in string: String) -> Bool {
     Set(string).count == string.count
 }
+
+func uniqueOccurrences(in string: String) -> Bool {
+    let counts = Dictionary(grouping: string) { $0 }.values.map { $0.count }
+    return Set(counts).count == counts.count
+}
