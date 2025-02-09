@@ -38,4 +38,14 @@ struct FunTests {
         #expect(sortByLength(["paul", "taylor", "adele"]) == ["taylor", "adele", "paul"])
         #expect(sortByLength([]) == [])
     }
+    
+    @Test("Practice challenge 4: Do two strings contain the same characters?")
+    func stringsContainSameCharacters() {
+        #expect(areCharactersIdentical(in: "abca", and: "abca"))
+        #expect(areCharactersIdentical(in: "abc", and: "cba"))
+        #expect(areCharactersIdentical(in: "a1 b2", and: "b1 a2"))
+        #expect(areCharactersIdentical(in: "abc", and: "abca") == false)
+        #expect(areCharactersIdentical(in: "abcc", and: "abca") == false)
+        #expect(areCharactersIdentical(in: "abc", and: "Abc") == false)
+    }
 }

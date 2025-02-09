@@ -18,3 +18,7 @@ func count(letter: Character, in word: String) -> Int {
 func sortByLength(_ array: [String]) -> [String] {
     return array.sorted { $0.count > $1.count }
 }
+
+func areCharactersIdentical(in string1: String, and string2: String) -> Bool {
+    return string1.sorted() == string2.sorted()
+}
