@@ -224,3 +224,16 @@ func guessNumber() -> Int {
     }
     return low
 }
+
+var logs = [String: Int]()
+func log(message: String, time: Int) -> Bool {
+    if let lastTime = logs[message] {
+        if time < lastTime + 5 {
+            return false
+        }
+    }
+    
+    print(message)
+    logs[message] = time
+    return true
+}

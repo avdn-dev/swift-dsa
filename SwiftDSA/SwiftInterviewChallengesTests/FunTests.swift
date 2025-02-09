@@ -162,4 +162,18 @@ struct FunTests {
     func binarySearch() {
         #expect(guessNumber() == 320)
     }
+    
+    @Test("Fun challenge 20: Rate-limited logging")
+    func logging() {
+        #expect(log(message: "Hello, world", time: 0) == true)
+        #expect(log(message: "Hello, world", time: 1) == false)
+        #expect(log(message: "Hello, world", time: 2) == false)
+        #expect(log(message: "Hello, Swift", time: 2) == true)
+        #expect(log(message: "Hello, world", time: 3) == false)
+        #expect(log(message: "Hello, world", time: 4) == false)
+        #expect(log(message: "Hello, world", time: 5) == true)
+        #expect(log(message: "Hello, world", time: 9) == false)
+        #expect(log(message: "Hello, world", time: 10) == true)
+        #expect(log(message: "Hello, world", time: 100) == true)
+    }
 }
