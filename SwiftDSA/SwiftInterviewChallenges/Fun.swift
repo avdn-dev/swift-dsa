@@ -80,3 +80,14 @@ func isPangram(_ string: String) -> Bool {
 func createFunction() -> (String) -> Void {
     { print($0) }
 }
+
+func sortByFrequency<T: Comparable & Hashable>(_ array: [T]) -> [T] {
+    let counts = Dictionary(grouping: array) { $0 }.mapValues { $0.count }
+    return array.sorted {
+        if counts[$0]! == counts[$1]! {
+            $0 < $1
+        } else {
+            counts[$0]! < counts[$1]!
+        }
+    }
+}

@@ -86,4 +86,12 @@ struct FunTests {
         #expect(isPangram("The quick brown fox jumps over the lazy dog"))
         #expect(isPangram("The quick brown fox jumped over the lazy dog") == false)
     }
+    
+    @Test("Fun challenge 12: Sorting by frequency")
+    func sortingByFrequency() {
+        #expect(sortByFrequency([1, 1, 1, 2, 2, 3]) == [3, 2, 2, 1, 1, 1])
+        #expect(sortByFrequency([1, 2, 1, 2, 3, 1]) == [3, 2, 2, 1, 1, 1])
+        #expect(sortByFrequency([1, 1, 1, 1, 1, 1]) == [1, 1, 1, 1, 1, 1])
+        #expect(sortByFrequency([3, 2, 1]) == [1, 2, 3])
+    }
 }
